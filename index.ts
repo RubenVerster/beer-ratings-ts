@@ -1,10 +1,10 @@
 enum TRating {
-  ewNo = 'ewNo',
-  bad = 'Bad',
-  good = 'Good',
-  great = 'Great',
-  excellent = 'Excellent',
-  fuckYeah = 'Fuck Yeah',
+  EW = "Ew, no. You call this beer?",
+  BAD = "If there was really nothing else to drink...",
+  GOOD = "Better if it's cold",
+  GREAT = "Great",
+  EXCELLENT = "Buy these in packets",
+  FUCKYEAH = "Set money aside for these ;)",
 }
 
 interface IBeer {
@@ -32,31 +32,49 @@ interface IBeer {
   guinness: {
     rating: TRating;
   };
+  loxtonia: {
+    rating: TRating;
+  };
+  radler: {
+    rating: TRating;
+  };
+  heinekenZero: {
+    rating: TRating;
+  };
 }
 
 let ratings: IBeer = {
-    blackLabel: {
-        rating: TRating.bad,
-    },
-    heineken: {
-        rating: TRating.good,
-    },
-    bitBurger: {
-        rating: TRating.excellent,
-    },
-    bavaria: {
-        rating: TRating.good,
-    },
-    budweiser: {
-        rating: TRating.ewNo,
-    },
-    corona: {
-        rating: TRating.good,
-    },
-    erdinger: {
-        rating: TRating.fuckYeah,
-    },
-    guinness: {
-        rating: TRating.excellent,
-    },
+  blackLabel: {
+    rating: TRating.EW,
+  },
+  heineken: {
+    rating: TRating.GOOD,
+  },
+  bitBurger: {
+    rating: TRating.EXCELLENT,
+  },
+  bavaria: {
+    rating: TRating.GOOD,
+  },
+  budweiser: {
+    rating: TRating.EW,
+  },
+  corona: {
+    rating: TRating.GOOD,
+  },
+  erdinger: {
+    rating: TRating.FUCKYEAH,
+  },
+  guinness: {
+    rating: TRating.GOOD,
+  },
+  loxtonia: {
+    rating: TRating.FUCKYEAH,
+  },
+  radler: {
+    rating: TRating.FUCKYEAH,
+  },
+  heinekenZero: {
+    rating: TRating.GREAT,
+  },
 };
